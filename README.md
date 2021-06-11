@@ -7,10 +7,11 @@
 For more detailed explanations, please see my thesis, "A Proxy Peng-Robinson EOS for Efficient Modeling of Phase Behavior", available at The University of Texas at Austin.  
 
 ### Summary
-The main novelty of this research is to present a fast and general formulation for a proxy model of fugacity coefficient based on the Peng-Robinson EOS (Peng and Robinson 1976). To this end, we develop fast and accurate artificial neural networks (ANNs) for compositional reservoir simulation, using a novel set of parameters. The predictor features are: mixed attraction parameter $A_m$, mixed covolume parameter $B_m$, component covolume parameter $B_i$ and $(\sum{x_{i}A_{ij}}{})_i$. We generate training data using the PR EOS using semi-random sampling within a T-P-x range. We train Nc number of ANN models using Tensorflow-Keras, then implement the models into a stand-alone simulator. Lastly, we optimize code with just-in-time compilation for a fair speed comparison between ANN and conventional EOS algorithms.  
+The main novelty of this research is to present a fast and general formulation for a proxy model of fugacity coefficient based on the Peng-Robinson EOS (Peng and Robinson 1976). To this end, we develop fast and accurate artificial neural networks (ANNs) for compositional reservoir simulation, using a novel set of parameters. The predictor features are: mixed attraction parameter ![image](https://user-images.githubusercontent.com/58376492/121730082-d916b480-cab4-11eb-9750-737f291a28f1.png), mixed covolume parameter ![image](https://user-images.githubusercontent.com/58376492/121730165-ee8bde80-cab4-11eb-810b-c95c52e95697.png), component covolume parameter ![image](https://user-images.githubusercontent.com/58376492/121730231-04010880-cab5-11eb-927d-d4900c7e688f.png)
+and ![image](https://user-images.githubusercontent.com/58376492/121730019-c4d2b780-cab4-11eb-8b01-819361432325.png). We generate training data using the PR EOS using semi-random sampling within a T-P-x range. We train Nc number of ANN models using Tensorflow-Keras, then implement the models into a stand-alone simulator. Lastly, we optimize code with just-in-time compilation for a fair speed comparison between ANN and conventional EOS algorithms.  
 
 
-![image.png](attachment:image.png)
+![Project_flowchart](https://user-images.githubusercontent.com/58376492/121729637-50981400-cab4-11eb-90c4-302cb2a8d966.png)
 
 ### Table of Contents
     1. Model Formulation
@@ -21,7 +22,7 @@ The main novelty of this research is to present a fast and general formulation f
 
 ### 1. Model Formulation
 Please see Chapter 3 of the thesis for the key advantages of this formulation.  
-$ln \phi_i=f_{ANN_i}(A_m, B_m, B_i, (\sum{x_{i}A_{ij}}{})_i)$
+![image](https://user-images.githubusercontent.com/58376492/121729960-ad93ca00-cab4-11eb-8f0f-46715ca1acf7.png)
 
 ### 2. Conventional Stability Analysis and Flash
 Please see Appendix A and B of the thesis for flowcharts of the code. The ANN models offer speed up because they bypass the cubic equation calculations and the evaluation of the fugacity coefficient.  
