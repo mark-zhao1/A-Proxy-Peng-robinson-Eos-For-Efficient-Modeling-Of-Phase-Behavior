@@ -1,5 +1,5 @@
 # Ln_phi_model
-A Proxy Peng-Robinson EOS For Rapid Multiphase Flash
+A Proxy Peng-robinson Eos For Efficient Modeling Of Phase Behavior
 ANN prediction of fugacity coefficient from {Am, Bm, Bi, sum_xjAij} attributes.
 
 Snapshot of private repository, work in progress.  
@@ -32,5 +32,3 @@ Questions to: mark.zhao@utexas.edu
     ANN ln_phi model implemented to replace equation-of-state calculations.
     Redacted in preparation for SPE Reservoir Simulation Conference.
     
-# Weekly Reports  
-    Redacted.
